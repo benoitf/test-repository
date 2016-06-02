@@ -13,7 +13,7 @@
             "name": "ws-machine",
             "type": "docker",
             "source": {
-              "content": "FROM codenvy/ubuntu_jdk8\nRUN FLORENT=CUSTOM_FACTORY",
+              "content": "FROM codenvy/ubuntu_jdk8\nENV FLORENT=CUSTOM_FACTORY",
               "type": "dockerfile"
             },
             "dev": true

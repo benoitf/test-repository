@@ -1,6 +1,6 @@
 {
   "v": "4.0",
-  "name": "vertx-maven-verticle",
+  "name": "my-factory",
   "workspace": {
     "environments": [
       {
@@ -36,9 +36,8 @@
         "name": "my custom command",
         "type": "custom"
       }
-    ],
+    ]
   },
-  "name":"factory",
   "ide": {
     "onProjectsLoaded": {
       "actions": [

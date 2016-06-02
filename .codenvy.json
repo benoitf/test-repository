@@ -31,6 +31,7 @@
       }
     ],
     "defaultEnv":"florent",
+    "name": "my-custom-workspace"
     "projects":[
       {
         "links":[

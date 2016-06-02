@@ -38,6 +38,7 @@
       }
     ],
   },
+  "name":"factory",
   "ide": {
     "onProjectsLoaded": {
       "actions": [

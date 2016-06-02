@@ -1,0 +1,45 @@
+{
+  "v":"4.0",
+  "name":"my-custom-factory",
+  "workspace":{
+    "environments":[
+      {
+        "name":"florent",
+        "machineConfigs":[
+          {
+            "limits":{
+              "ram":1234
+            },
+            "name":"ws-machine",
+            "type":"docker",
+            "source":{
+              "content":"FROM codenvy/ubuntu_jdk8\nENV FLORENT=IN_A_FACTORY",
+              "type":"dockerfile"
+            },
+            "dev":true,
+            "servers":[
+
+            ],
+            "envVariables":{
+
+            },
+            "links":[
+
+            ]
+          }
+        ]
+      }
+    ],
+    "defaultEnv":"florent",
+    "projects":[
+      {
+        "links":[
+
+        ],
+        "name":"my-super-project",
+        "type":"maven",
+        "path":"/my-super-project"
+      }
+    ]
+  }
+}

@@ -1,46 +1,59 @@
 {
-  "v":"4.0",
-  "name":"my-custom-factory",
-  "workspace":{
-    "environments":[
+  "v": "4.0",
+  "name": "vertx-maven-verticle",
+  "workspace": {
+    "environments": [
       {
-        "name":"florent",
-        "machineConfigs":[
+        "name": "florent",
+        "machineConfigs": [
           {
-            "limits":{
-              "ram":1234
+            "limits": {
+              "ram": 1234
             },
-            "name":"ws-machine",
-            "type":"docker",
-            "source":{
-              "content":"FROM codenvy/ubuntu_jdk8\nENV FLORENT=IN_A_FACTORY",
-              "type":"dockerfile"
+            "name": "ws-machine",
+            "type": "docker",
+            "source": {
+              "content": "FROM codenvy/ubuntu_jdk8\nRUN FLORENT=CUSTOM_FACTORY",
+              "type": "dockerfile"
             },
-            "dev":true,
-            "servers":[
-
-            ],
-            "envVariables":{
-
-            },
-            "links":[
-
-            ]
+            "dev": true
           }
         ]
       }
     ],
-    "defaultEnv":"florent",
-    "name":"myworkspace",
-    "projects":[
+    "defaultEnv": "florent",
+    "projects": [
       {
-        "links":[
-
-        ],
-        "name":"my-super-project",
-        "type":"maven",
-        "path":"/my-super-project"
+        "name": "my-custom-name",
+        "type": "maven",
+        "path": "/my-custom-name",
       }
-    ]
-  }
+    ],
+    "name": "myworkspace",
+    "commands": [
+      {
+        "commandLine": "echo hello world",
+        "name": "my custom command",
+        "type": "custom"
+      }
+    ],
+  },
+  "ide": {
+    "onProjectsLoaded": {
+      "actions": [
+        {
+          "properties": {
+            "file": "/my-custom-name/.codenvy.json"
+          },
+          "id": "openFile"
+        },
+        {
+          "properties": {
+            "name": "my custom command"
+          },
+          "id": "runCommand"
+        }
+      ]
+    }
+  }  
 }

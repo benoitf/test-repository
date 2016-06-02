@@ -43,7 +43,7 @@
       "actions": [
         {
           "properties": {
-            "file": "/my-custom-name/.codenvy.json"
+            "file": "/my-custom-name/README.md"
           },
           "id": "openFile"
         },

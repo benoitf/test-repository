@@ -32,7 +32,7 @@
     "name": "myworkspace",
     "commands": [
       {
-        "commandLine": "echo hello world",
+        "commandLine": "echo hello world updated",
         "name": "my custom command",
         "type": "custom"
       }
